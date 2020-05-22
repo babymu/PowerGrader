@@ -1,0 +1,73 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  Keyboard,
+  View,
+  TextInput,
+  TouchableWithoutFeedback,
+  Alert,
+  KeyboardAvoidingView,
+  Button,
+  Image,
+  TouchableHighlight,
+  ImageBackground,Platform,Animated,ActivityIndicator
+} from 'react-native';
+
+
+
+class Homescreen extends React.Component {
+
+ 
+  render() {
+    return (
+
+
+      <View style={styles.container}>
+       <View style={styles.textContainer}>
+ <TouchableHighlight
+              onPress={() => this.props.navigation.navigate('')}
+            >
+          <Image source ={{uri: 'https://codehs.com/uploads/0c4d86ab9cec175fb2e4bfb73b0304dd'}}
+ style={{ height: 100, width: 100, justifyContent: 'center', }}
+/>
+          
+            </TouchableHighlight> 
+            <Text style ={styles.text}>
+            Calculating grades...
+            </Text>
+<View style={[styles.container, styles.horizontal]}>
+<ActivityIndicator size="large" color="#0000ff" />
+</View>
+            </View>
+
+
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'ivory',
+    
+  },
+
+
+  textContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text:{
+fontWeight:'bold',
+fontSize:35,
+color:'navy',
+  }
+
+
+  
+});
+
+
+export default Homescreen;
